@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'by.slava'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // test
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    // lombok
+    implementation 'org.projectlombok:lombok:1.18.38'
+    runtimeOnly 'org.projectlombok:lombok:1.18.38'
+
+}
+
+test {
+    useJUnitPlatform()
+}
